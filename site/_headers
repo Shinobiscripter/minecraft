@@ -1,0 +1,11 @@
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: cross-origin
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Security-Policy: frame-ancestors 'self' https://nebulahub-shinobiscripter.netlify.app http://localhost:8000
+/game/assets.epk
+  Content-Type: application/octet-stream
+/game/classes.js
+  Content-Type: application/javascript
