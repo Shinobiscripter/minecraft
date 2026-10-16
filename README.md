@@ -36,3 +36,11 @@ Return to launcher asks for confirmation. Save and quit from the game before clo
 Original launcher code and SVG artwork added in `site/` and `scripts/` are AGPL-3.0-only; see `LICENSE-LAUNCHER.txt`. That license does **not** relicense the supplied compiled game or its resources. Their embedded original credits and notices remain intact. The repository did not provide a separate game license or complete corresponding game source tree.
 
 The supplied game credits EaglercraftZ-Devs and EaglercraftX/lax1dude and contributors. Minecraft and its resources are attributed to Mojang/Microsoft. Source repository: https://github.com/Shinobiscripter/minecraft (original files from commit `bfdd12b190c5d5da1c0a70b9053ecd9b8d44ca18`). Preserve notices and review upstream distribution terms when redistributing those third-party assets.
+
+## All repository editions
+
+The launcher now offers 1.20.4, 1.20.6, 26.2, 1.12.2, 1.8.8, 1.5.2, alpha 1.2.6, beta 1.3, beta 1.7.3, indev and Pocket Edition. Build with `npm run build`; publish `dist`. The launcher loads only the selected edition after Play. Existing `/game/` links and 1.20.4 storage origin are preserved.
+
+The build rewrites external asset loader URLs to local files. Compressed JS and split HTML stay in their supplied formats; the browser decompresses/assembles them. No individual asset exceeds 50 MiB. Large editions still use substantial client memory. Modern Chromium with WebAssembly GC is needed for the WASM-GC builds. The shared loader's promotional server injection is omitted from the generated site; the original source remains unchanged. Pocket Edition cache cleanup is restricted to its own cache prefix.
+
+These are community-supplied build labels, not verified official version parity. Back up worlds before switching versions: some engines can share browser databases. External multiplayer servers and relays are outside this deployment. Original game credits remain; the launcher AGPL license does not grant rights to third-party game assets. Review redistribution rights before wider distribution.
